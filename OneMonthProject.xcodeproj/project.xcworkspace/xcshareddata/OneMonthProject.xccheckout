@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>061B114D-4713-42D4-BF27-A79B3F4D51A4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OneMonthProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0AD57B588AF19BEDB90A5F9BBE7D32B916DFC6AC</key>
+		<string>https://github.com/eskuhn/OneMonthiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OneMonthProject.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0AD57B588AF19BEDB90A5F9BBE7D32B916DFC6AC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/eskuhn/OneMonthiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0AD57B588AF19BEDB90A5F9BBE7D32B916DFC6AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0AD57B588AF19BEDB90A5F9BBE7D32B916DFC6AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OneMonthiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
