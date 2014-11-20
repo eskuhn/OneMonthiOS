@@ -13,18 +13,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        
+        self.setupParse()
         
-        Parse.setApplicationId("Hf8WImGF1sZTgvyiivKkUJEz8WAgz2pp2yM644Om", clientKey: "0Her4NwQTuUaOYUNJvgvKlORbuOt30TUXktfNY2S")
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        var testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.save()
+        var navigationController = UINavigationController()
+        
+        
+        // if there's a logged in user
+        
+        if PFUser.currentUser() == nil
+        {
+            println("user does not exist!")
+        }
+        else
+        {
+            println("we have a user")
+        }
+        
+        var ViewController = UIViewController()
+        ViewController.view.backgroundColor = UIColor.magentaColor()
+        
+        self.window!.rootViewController = ViewController
+        self.window!.makeKeyAndVisible()
         
         return true
+    }
+
+    func setupParse()
+    {
+        Parse.setApplicationId("Hf8WImGF1sZTgvyiivKkUJEz8WAgz2pp2yM644Om", clientKey: "0Her4NwQTuUaOYUNJvgvKlORbuOt30TUXktfNY2S")
+        
+        
+//  This is how you test if Parse is still working
+        
+//        var testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.save()
     }
 
     func applicationWillResignActive(application: UIApplication) {
