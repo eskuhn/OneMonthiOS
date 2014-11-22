@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="OneMonthProject" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="euR-2O-g7L" id="qfe-En-YZm"/>
+                <outlet property="passwordTextField" destination="hlI-Z2-4i8" id="mCx-rY-tIb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="euR-2O-g7L">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ryd-Dn-ee7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="j2L-NE-SuW"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hlI-Z2-4i8">
+                    <rect key="frame" x="0.0" y="45" width="600" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="KaR-Ug-eDb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="kRH-6I-SrN"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.94968133223684226" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="euR-2O-g7L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Az-dD-lJL"/>
+                <constraint firstAttribute="trailing" secondItem="euR-2O-g7L" secondAttribute="trailing" id="3bi-88-l56"/>
+                <constraint firstAttribute="trailing" secondItem="hlI-Z2-4i8" secondAttribute="trailing" id="AAf-LP-dgH"/>
+                <constraint firstItem="hlI-Z2-4i8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CgF-cD-7pr"/>
+                <constraint firstItem="euR-2O-g7L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nq3-Yl-pid"/>
+            </constraints>
+            <point key="canvasLocation" x="411" y="664"/>
+        </view>
+    </objects>
+</document>

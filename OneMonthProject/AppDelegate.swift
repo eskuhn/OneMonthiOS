@@ -13,35 +13,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
        
         self.setupParse()
+        self.setupAppAppearance()
+        
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         var navigationController = UINavigationController()
-        
-        
-        // if there's a logged in user
+        var startViewController = StartViewController(nibName: "StartViewController", bundle: nil)
         
         if PFUser.currentUser() == nil
         {
-            println("user does not exist!")
+            navigationController.viewControllers = [startViewController]
         }
         else
         {
             println("we have a user")
         }
         
-        var ViewController = UIViewController()
-        ViewController.view.backgroundColor = UIColor.magentaColor()
-        
-        self.window!.rootViewController = ViewController
+        self.window!.rootViewController = navigationController
         self.window!.makeKeyAndVisible()
         
         return true
     }
+    
+    
 
     func setupParse()
     {
@@ -53,6 +53,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        var testObject = PFObject(className: "TestObject")
 //        testObject["foo"] = "bar"
 //        testObject.save()
+    }
+    
+    func setupAppAppearance()
+    {
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
