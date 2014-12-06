@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.setupParse()
         self.setupAppAppearance()
         
-        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         var navigationController = UINavigationController()
@@ -40,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
     
 
     func setupParse()
