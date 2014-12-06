@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else
         {
-            println("we have a user")
+            var tabBarController = TabBarController()
+            navigationController.viewControllers = [startViewController, tabBarController]
         }
         
         self.window!.rootViewController = navigationController

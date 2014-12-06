@@ -114,7 +114,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             
             if ((user) != nil)
             {
-                println("sign in success")
+                var tabBarController = TabBarController()
+                self.navigationController?.pushViewController(tabBarController, animated: true)
             }
             else
             {
@@ -136,7 +137,8 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             
             if error == nil
             {
-                println("sign up success!")
+                var tabBarController = TabBarController()
+                self.navigationController?.pushViewController(tabBarController, animated: true)
             }
             else
             {
