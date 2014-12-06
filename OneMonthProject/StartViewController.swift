@@ -23,6 +23,13 @@ class StartViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+    }
+    
     @IBAction func didTapSignIn(sender: AnyObject)
     {
         var viewController = AuthViewController(nibName: "AuthViewController", bundle: nil)
