@@ -137,6 +137,20 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             
             if error == nil
             {
+                // New user follows him/herself
+                self.follow(user, completionHandler: {
+                    (error) -> () in
+                    
+                    if error == nil
+                    {
+                        var tabBarController = TabBarController()
+                        self.navigationController?.pushViewController(tabBarController, animated: true)
+                    }
+                    else
+                    {
+                        println("unable for user to follow themself")
+                    }
+                })
                 var tabBarController = TabBarController()
                 self.navigationController?.pushViewController(tabBarController, animated: true)
             }
@@ -147,6 +161,16 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func follow(user: PFUser!, completionHandler:(error: NSError?) -> ())
+    {
+        var relation = PFUser.currentUser().relationForKey("following")
+        relation.addObject(user)
+        PFUser.currentUser().saveInBackgroundWithBlock({
+            (success, error) -> Void in
+            
+            completionHandler(error: error)
+        })
+    }
 }
     
     
