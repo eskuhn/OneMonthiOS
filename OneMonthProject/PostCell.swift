@@ -10,7 +10,17 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
-    var item: PFObject?
+    @IBOutlet var postImageView: UIImageView?
+    @IBOutlet var usernameLabel: UILabel?
+    @IBOutlet var datelabel: UILabel?
+    
+    var post: PFObject?
+    {
+        didSet
+        {
+            self.configure()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +33,30 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure()
+    {
+        if let constPost = post
+        {
+            // set the username label
+            var user = constPost["User"] as PFUser
+            user.fetchIfNeededInBackgroundWithBlock({
+                (object, error) -> Void in
+                
+                if let constObject = object
+                {
+                    self.usernameLabel!.text = user.username
+                }
+                else if let constError = error
+                {
+                    //Alert the user
+                }
+            })
+            
+            // set the date label
+            
+            // download the image and display it
+            
+            
+        }
+    }
 }

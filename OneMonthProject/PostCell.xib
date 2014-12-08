@@ -60,6 +60,11 @@
                     <constraint firstItem="lkB-c2-dUI" firstAttribute="top" secondItem="Pov-u8-Gmu" secondAttribute="bottom" constant="10" id="lmd-SH-y9W"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="datelabel" destination="paI-kj-0xK" id="RUW-RL-NXo"/>
+                <outlet property="postImageView" destination="lkB-c2-dUI" id="WuR-bL-l9U"/>
+                <outlet property="usernameLabel" destination="GXz-Y1-vMZ" id="cWD-Uz-IEv"/>
+            </connections>
             <point key="canvasLocation" x="557" y="647.5"/>
         </tableViewCell>
     </objects>
