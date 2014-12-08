@@ -30,6 +30,11 @@
 		0EE10D6B1A1D5BCB00EF882E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE10D6A1A1D5BCB00EF882E /* StoreKit.framework */; };
 		0EE10D6D1A1D5BD300EF882E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE10D6C1A1D5BD300EF882E /* SystemConfiguration.framework */; };
 		15227ACF7AE31645E74512BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD86A935A918E03C823348BC /* libPods.a */; };
+		BFD2306C1A354CEB0076A98A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2306B1A354CEB0076A98A /* NetworkManager.swift */; };
+		BFD2306F1A354EAA0076A98A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2306D1A354EAA0076A98A /* FeedViewController.swift */; };
+		BFD230701A354EAA0076A98A /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD2306E1A354EAA0076A98A /* FeedViewController.xib */; };
+		BFD230731A3550900076A98A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD230711A3550900076A98A /* PostCell.swift */; };
+		BFD230741A3550900076A98A /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD230721A3550900076A98A /* PostCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,11 @@
 		0EE10D6C1A1D5BD300EF882E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9FE873565D85C7913F72F6E6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AD86A935A918E03C823348BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD2306B1A354CEB0076A98A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BFD2306D1A354EAA0076A98A /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		BFD2306E1A354EAA0076A98A /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		BFD230711A3550900076A98A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		BFD230721A3550900076A98A /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		E611889686FC084BC42ECF83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				0E14BA1D1A155E3200E156ED /* AppDelegate.swift */,
+				BFD2306B1A354CEB0076A98A /* NetworkManager.swift */,
 				0E14BA241A155E3200E156ED /* Images.xcassets */,
 				0E14BA261A155E3200E156ED /* LaunchScreen.xib */,
 				0E56B4C31A1E9E05002539AF /* ViewControllers */,
@@ -173,6 +184,10 @@
 				0E56B4C81A1FD192002539AF /* AuthViewController.swift */,
 				0E56B4C91A1FD192002539AF /* AuthViewController.xib */,
 				0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */,
+				BFD2306D1A354EAA0076A98A /* FeedViewController.swift */,
+				BFD2306E1A354EAA0076A98A /* FeedViewController.xib */,
+				BFD230711A3550900076A98A /* PostCell.swift */,
+				BFD230721A3550900076A98A /* PostCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -305,7 +320,9 @@
 				0E1E77961A156ED1004DD401 /* Podfile in Resources */,
 				0E56B4C71A1E9E28002539AF /* StartViewController.xib in Resources */,
 				0E56B4CB1A1FD192002539AF /* AuthViewController.xib in Resources */,
+				BFD230741A3550900076A98A /* PostCell.xib in Resources */,
 				0E14BA281A155E3200E156ED /* LaunchScreen.xib in Resources */,
+				BFD230701A354EAA0076A98A /* FeedViewController.xib in Resources */,
 				0E14BA251A155E3200E156ED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,8 +377,11 @@
 				0E56B4CE1A201F9A002539AF /* String+Extensions.swift in Sources */,
 				0E14BA1E1A155E3200E156ED /* AppDelegate.swift in Sources */,
 				0E56B4D01A218009002539AF /* UIViewController+Extensions.swift in Sources */,
+				BFD2306C1A354CEB0076A98A /* NetworkManager.swift in Sources */,
 				0ED23BB01A3288CA00BC6AFF /* TabBarController.swift in Sources */,
+				BFD230731A3550900076A98A /* PostCell.swift in Sources */,
 				0E56B4CA1A1FD192002539AF /* AuthViewController.swift in Sources */,
+				BFD2306F1A354EAA0076A98A /* FeedViewController.swift in Sources */,
 				0E56B4C61A1E9E28002539AF /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
