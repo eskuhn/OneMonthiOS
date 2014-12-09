@@ -30,7 +30,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.81932824242782409" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="4eA-hh-dzg"/>
                             <constraint firstItem="GXz-Y1-vMZ" firstAttribute="leading" secondItem="Pov-u8-Gmu" secondAttribute="leading" constant="10" id="9gY-ws-PQY"/>
@@ -41,9 +40,8 @@
                             <constraint firstAttribute="trailing" secondItem="paI-kj-0xK" secondAttribute="trailing" constant="8" id="vNe-Fs-JTu"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lkB-c2-dUI">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PostPlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="lkB-c2-dUI">
                         <rect key="frame" x="10" y="40" width="300" height="300"/>
-                        <color key="backgroundColor" red="0.098039215686274508" green="0.7803921568627451" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="g4u-Eb-oDI"/>
                             <constraint firstAttribute="width" constant="300" id="tcW-Bb-DLu"/>
@@ -68,4 +66,7 @@
             <point key="canvasLocation" x="557" y="647.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="PostPlaceholderImage" width="300" height="304"/>
+    </resources>
 </document>
