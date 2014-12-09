@@ -26,12 +26,9 @@ class PostCell: UITableViewCell {
         super.awakeFromNib()
         
         self.contentView.backgroundColor = UIColor.OMLightGray()
-
         
         self.usernameLabel?.text = nil
         self.dateLabel?.text = nil
-        
-        // Initialization code
     }
     
     override func prepareForReuse() {

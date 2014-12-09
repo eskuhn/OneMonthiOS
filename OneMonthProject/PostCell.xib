@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXz-Y1-vMZ">
                                 <rect key="frame" x="10" y="6" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paI-kj-0xK">
@@ -61,9 +61,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="datelabel" destination="paI-kj-0xK" id="RUW-RL-NXo"/>
+                <outlet property="dateLabel" destination="paI-kj-0xK" id="yYK-34-dJ7"/>
                 <outlet property="postImageView" destination="lkB-c2-dUI" id="WuR-bL-l9U"/>
-                <outlet property="usernameLabel" destination="GXz-Y1-vMZ" id="cWD-Uz-IEv"/>
+                <outlet property="usernameLabel" destination="GXz-Y1-vMZ" id="Hh0-fQ-0mx"/>
             </connections>
             <point key="canvasLocation" x="557" y="647.5"/>
         </tableViewCell>
