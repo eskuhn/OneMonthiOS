@@ -1,37 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PersonCell" customModule="OneMonthProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAH-pT-4eJ">
-                        <rect key="frame" x="276" y="0.0" width="44" height="44"/>
-                        <color key="backgroundColor" red="0.26164036425095261" green="1" blue="0.9260209838881952" alpha="1" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdA-jE-pN3">
+                        <rect key="frame" x="211" y="0.0" width="109" height="57"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="44" id="0cV-nJ-YHc"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="DNh-kF-FjH"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="1U9-KQ-JW6"/>
+                            <constraint firstAttribute="width" constant="109" id="4RC-Bi-mDM"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="57" id="G4c-bS-fFS"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="PiW-km-dYy"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Ujd-2y-nym"/>
+                            <constraint firstAttribute="width" constant="109" id="qcW-kF-Fdw"/>
+                            <constraint firstAttribute="height" priority="750" constant="57" id="skC-jN-xd1"/>
+                            <constraint firstAttribute="height" constant="57" id="vfL-AK-kJ3"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal" image="FollowButton">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1U9-KQ-JW6"/>
+                                <exclude reference="G4c-bS-fFS"/>
+                                <exclude reference="PiW-km-dYy"/>
+                                <exclude reference="Ujd-2y-nym"/>
+                                <exclude reference="qcW-kF-Fdw"/>
+                                <exclude reference="skC-jN-xd1"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="didTapFollow:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e5D-xF-gcX"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="uAH-pT-4eJ" secondAttribute="bottom" id="2bD-DJ-9BT"/>
-                    <constraint firstItem="uAH-pT-4eJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QRS-K4-6bh"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="uAH-pT-4eJ" secondAttribute="trailing" id="QRh-wH-p45"/>
-                    <constraint firstItem="uAH-pT-4eJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="V5b-yh-EQE"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="uAH-pT-4eJ" secondAttribute="bottom" id="l2Z-kd-5qS"/>
-                    <constraint firstAttribute="trailing" secondItem="uAH-pT-4eJ" secondAttribute="trailing" id="o5F-Cs-EIH"/>
+                    <constraint firstItem="DdA-jE-pN3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1Qg-Gh-zgf"/>
+                    <constraint firstAttribute="trailing" secondItem="DdA-jE-pN3" secondAttribute="trailing" id="38P-cH-epv"/>
+                    <constraint firstAttribute="bottom" secondItem="DdA-jE-pN3" secondAttribute="bottom" id="9e3-5L-9rC"/>
+                    <constraint firstAttribute="trailing" secondItem="DdA-jE-pN3" secondAttribute="trailing" id="D1t-ht-phf"/>
+                    <constraint firstAttribute="trailing" secondItem="DdA-jE-pN3" secondAttribute="trailing" id="IM9-Am-ZAW"/>
+                    <constraint firstItem="DdA-jE-pN3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M3y-yJ-kjM"/>
+                    <constraint firstItem="DdA-jE-pN3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QqI-bZ-xgU"/>
+                    <constraint firstAttribute="bottom" secondItem="DdA-jE-pN3" secondAttribute="bottom" id="W0a-0l-FhX"/>
+                    <constraint firstItem="DdA-jE-pN3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ajf-Rz-bNN"/>
+                    <constraint firstAttribute="trailing" secondItem="DdA-jE-pN3" secondAttribute="trailing" id="iw9-tG-lzO"/>
+                    <constraint firstAttribute="bottom" secondItem="DdA-jE-pN3" secondAttribute="bottom" constant="14" id="lo2-13-dHL"/>
+                    <constraint firstAttribute="bottom" secondItem="DdA-jE-pN3" secondAttribute="bottom" id="pNL-zx-yF3"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="38P-cH-epv"/>
+                        <exclude reference="9e3-5L-9rC"/>
+                        <exclude reference="IM9-Am-ZAW"/>
+                        <exclude reference="M3y-yJ-kjM"/>
+                        <exclude reference="QqI-bZ-xgU"/>
+                        <exclude reference="ajf-Rz-bNN"/>
+                        <exclude reference="iw9-tG-lzO"/>
+                        <exclude reference="lo2-13-dHL"/>
+                        <exclude reference="pNL-zx-yF3"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="followButton" destination="DdA-jE-pN3" id="O4v-bK-L6e"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="FollowButton" width="109" height="57"/>
+    </resources>
 </document>
