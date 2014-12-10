@@ -22,7 +22,8 @@ class PostCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         
         self.contentView.backgroundColor = UIColor.OMLightGray()
@@ -31,7 +32,8 @@ class PostCell: UITableViewCell {
         self.dateLabel?.text = nil
     }
     
-    override func prepareForReuse() {
+    override func prepareForReuse()
+    {
         super.prepareForReuse()
         
         self.postImageView?.image = UIImage(named: "PostPlaceholderImage")
