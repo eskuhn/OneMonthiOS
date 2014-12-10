@@ -10,15 +10,19 @@
 import UIKit
 
 
-class SearchViewController: UIViewController, UISearchBarDelegate{
+class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
 
     @IBOutlet var searchBar: UISearchBar?
     @IBOutlet var tableView: UITableView?
     
-    override func viewDidLoad() {
+    var searchResults = []
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        var nib = UINib(nibName: "PersonCell", bundle: nil)
+        self.tableView?.registerNib(nib, forCellReuseIdentifier: "PersonCellIdentifier")
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,10 +52,31 @@ class SearchViewController: UIViewController, UISearchBarDelegate{
         NetworkManager.sharedInstance.findUsers(searchTerm, completionHandler: {
             (objects, error) -> () in
             
-            println(objects)
-            println(error)
+            if let constObjects = objects
+            {
+                self.searchResults = constObjects
+                self.tableView?.reloadData()
+            }
+            else if let constError = error
+            {
+                //alert user
+            }
         })
         
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.searchResults.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("PersonCellIdentifier") as PersonCell
+        var user = self.searchResults[indexPath.row] as PFUser
+        
+        cell.user = user
+        
+        return cell
+    }
 }

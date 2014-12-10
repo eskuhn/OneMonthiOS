@@ -21,6 +21,8 @@
 		0ED23BB01A3288CA00BC6AFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */; };
 		0ED9E2431A37A500004676DD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E2411A37A500004676DD /* SearchViewController.swift */; };
 		0ED9E2441A37A500004676DD /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED9E2421A37A500004676DD /* SearchViewController.xib */; };
+		0ED9E24B1A37CCEC004676DD /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E2491A37CCEC004676DD /* PersonCell.swift */; };
+		0ED9E24C1A37CCEC004676DD /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED9E24A1A37CCEC004676DD /* PersonCell.xib */; };
 		0EE10D5B1A1D5B8000EF882E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE10D5A1A1D5B8000EF882E /* AudioToolbox.framework */; };
 		0EE10D5D1A1D5B8900EF882E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE10D5C1A1D5B8900EF882E /* CFNetwork.framework */; };
 		0EE10D5F1A1D5B9600EF882E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE10D5E1A1D5B9600EF882E /* CoreGraphics.framework */; };
@@ -70,6 +72,8 @@
 		0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0ED9E2411A37A500004676DD /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0ED9E2421A37A500004676DD /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		0ED9E2491A37CCEC004676DD /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		0ED9E24A1A37CCEC004676DD /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		0EE10D561A1D3A4500EF882E /* OneMonthProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneMonthProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		0EE10D5A1A1D5B8000EF882E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0EE10D5C1A1D5B8900EF882E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -198,6 +202,8 @@
 				0ED9E2411A37A500004676DD /* SearchViewController.swift */,
 				0ED9E2421A37A500004676DD /* SearchViewController.xib */,
 				0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */,
+				0ED9E2491A37CCEC004676DD /* PersonCell.swift */,
+				0ED9E24A1A37CCEC004676DD /* PersonCell.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 			files = (
 				0E1E77961A156ED1004DD401 /* Podfile in Resources */,
 				0E56B4C71A1E9E28002539AF /* StartViewController.xib in Resources */,
+				0ED9E24C1A37CCEC004676DD /* PersonCell.xib in Resources */,
 				0E56B4CB1A1FD192002539AF /* AuthViewController.xib in Resources */,
 				BFD230741A3550900076A98A /* PostCell.xib in Resources */,
 				0E14BA281A155E3200E156ED /* LaunchScreen.xib in Resources */,
@@ -388,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EE34EA11A363986008DC6A3 /* NSDate+Extensions.swift in Sources */,
+				0ED9E24B1A37CCEC004676DD /* PersonCell.swift in Sources */,
 				0E56B4CE1A201F9A002539AF /* String+Extensions.swift in Sources */,
 				0E14BA1E1A155E3200E156ED /* AppDelegate.swift in Sources */,
 				0E56B4D01A218009002539AF /* UIViewController+Extensions.swift in Sources */,
