@@ -11,8 +11,6 @@ import Foundation
 typealias ObjectsCompletionHandler = (objects: [AnyObject]?, error: NSError?) -> ()
 typealias ImageCompletionHandler = (image: UIImage?, error: NSError?) -> ()
 typealias BooleanCompletionHandler = (isFollowing: Bool?, error: NSError?) -> ()
-typealias ErrorCompletionHandler = (error: NSError?) -> ()
-
 
 
 public class NetworkManager
@@ -25,6 +23,17 @@ public class NetworkManager
         }
         
         return Singleton.instance
+    }
+    
+    func follow(user: PFUser!, completionHandler:(error: NSError?) -> ())
+    {
+        var relation = PFUser.currentUser().relationForKey("following")
+        relation.addObject(user)
+        PFUser.currentUser().saveInBackgroundWithBlock({
+            (success, error) -> Void in
+            
+            completionHandler(error: error)
+        })
     }
     
     func fetchFeed(completionHandler: ObjectsCompletionHandler!)
@@ -110,7 +119,7 @@ public class NetworkManager
     {
         var relation = PFUser.currentUser().relationForKey("following")
         var query = relation.query()
-        query.whereKey("username", equalTo: user.username)
+        query.whereKey("username",equalTo: user.username)
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
             
@@ -127,60 +136,5 @@ public class NetworkManager
         }
     }
     
-    func follow(user: PFUser!, completionHandler:(error: NSError?) -> ())
-    {
-        var relation = PFUser.currentUser().relationForKey("following")
-        relation.addObject(user)
-        PFUser.currentUser().saveInBackgroundWithBlock({
-            (success, error) -> Void in
-            
-            completionHandler(error: error)
-        })
-    }
-    
-    func updateFollowValue(value: Bool, user: PFUser, completionHandler: ErrorCompletionHandler!)
-    {
-        var relation = PFUser.currentUser().relationForKey("following")
-        
-        if (value == true)
-        {
-            relation.addObject(user)
-        }
-        else
-        {
-            relation.removeObject(user)
-        }
-        
-        PFUser.currentUser().saveInBackgroundWithBlock {
-            (success, error) -> Void in
-            
-            if (error != nil)
-            {
-                println("error following/unfollowing user")
-                completionHandler(error: error)
-            }
-            
-            completionHandler(error: error)
-        }
-    }
-    
-    func fetchPosts(user: PFUser!, completionHandler: ObjectsCompletionHandler!)
-    {
-        var postQuery = PFQuery(className: "Post")
-        postQuery.whereKey("User", equalTo: user)
-        postQuery.orderByDescending("createdAt")
-        postQuery.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-            
-            if(error != nil)
-            {
-                println("error fetching feed posts")
-                completionHandler(objects: nil, error: error)
-            }
-            else
-            {
-                println("success fetching feed posts \(objects)")
-                completionHandler(objects: objects, error: nil)
-            }
-        })
-    }
+
 }

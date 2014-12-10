@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad()
     {
@@ -16,8 +16,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
         var feedViewController = FeedViewController(nibName: "FeedViewController", bundle: nil)
     
-        var profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        profileViewController.user = PFUser.currentUser()
+        var profileViewController = UIViewController()
+        profileViewController.view.backgroundColor = UIColor.yellowColor()
         
         var searchViewController = SearchViewController(nibName: "SearchViewController", bundle: nil)
 
@@ -40,8 +40,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.edgesForExtendedLayout = UIRectEdge.None
         self.navigationItem.hidesBackButton = true
         self.tabBar.translucent = false
-        
-        self.delegate = self
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .Done, target: self, action: "didTapSignOut:")
         
@@ -68,29 +66,5 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-    
 
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool
-    {
-        var cameraViewController = self.viewControllers![3] as UIViewController
-        if viewController == cameraViewController
-        {
-            showCamera()
-            return false
-        }
-        
-        return true
-    }
-
-    func showCamera()
-    {
-        if !UIImagePickerController.isSourceTypeAvailable(.Camera)
-        {
-            self.alert("Camera is not available")
-            return
-        }
-        
-        
-    }
 }
-
