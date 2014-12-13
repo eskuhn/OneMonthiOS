@@ -18,6 +18,7 @@
 		0E56B4CB1A1FD192002539AF /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E56B4C91A1FD192002539AF /* AuthViewController.xib */; };
 		0E56B4CE1A201F9A002539AF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56B4CD1A201F9A002539AF /* String+Extensions.swift */; };
 		0E56B4D01A218009002539AF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E56B4CF1A218009002539AF /* UIViewController+Extensions.swift */; };
+		0E63330B1A3BA11D00498318 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63330A1A3BA11D00498318 /* UIImage+Extensions.swift */; };
 		0ED23BB01A3288CA00BC6AFF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */; };
 		0ED9E2431A37A500004676DD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED9E2411A37A500004676DD /* SearchViewController.swift */; };
 		0ED9E2441A37A500004676DD /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED9E2421A37A500004676DD /* SearchViewController.xib */; };
@@ -71,6 +72,7 @@
 		0E56B4C91A1FD192002539AF /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		0E56B4CD1A201F9A002539AF /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0E56B4CF1A218009002539AF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0E63330A1A3BA11D00498318 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		0ED23BAF1A3288CA00BC6AFF /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0ED9E2411A37A500004676DD /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0ED9E2421A37A500004676DD /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				0EE34EA21A3675FE008DC6A3 /* UIColor+Extensions.swift */,
 				0EE34EA01A363986008DC6A3 /* NSDate+Extensions.swift */,
 				0E56B4CF1A218009002539AF /* UIViewController+Extensions.swift */,
+				0E63330A1A3BA11D00498318 /* UIImage+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				BFD230731A3550900076A98A /* PostCell.swift in Sources */,
 				0E56B4CA1A1FD192002539AF /* AuthViewController.swift in Sources */,
 				0EE34EA31A3675FE008DC6A3 /* UIColor+Extensions.swift in Sources */,
+				0E63330B1A3BA11D00498318 /* UIImage+Extensions.swift in Sources */,
 				BFD2306F1A354EAA0076A98A /* FeedViewController.swift in Sources */,
 				0E56B4C61A1E9E28002539AF /* StartViewController.swift in Sources */,
 			);

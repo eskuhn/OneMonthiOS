@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController, UITabBarControllerDelegate {
+class TabBarController: UITabBarController, UITabBarControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad()
     {
@@ -84,13 +84,42 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     func showCamera()
     {
-        if !UIImagePickerController.isSourceTypeAvailable(.Camera)
+        if !UIImagePickerController.isSourceTypeAvailable(.SavedPhotosAlbum)
         {
-            self.alert("Camera is not available")
+            self.showAlert("Camera is not available")
             return
         }
+        else
+        {
+            var viewController = UIImagePickerController()
+            viewController.sourceType = .SavedPhotosAlbum
+            viewController.delegate = self
+            
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
+    {
+        var image: UIImage = info[UIImagePickerControllerOriginalImage] as UIImage
         
+        var targetWidth = UIScreen.mainScreen().scale * UIScreen.mainScreen().bounds.size.width
+        var resizedImage = image.resize(targetWidth)
         
+        picker.dismissViewControllerAnimated(true, completion: {
+            
+            () -> Void in
+            
+            NetworkManager.sharedInstance.postImage(resizedImage, completionHandler: {
+                (error) -> () in
+                
+                if let constError = error
+                {
+                    self.showAlert(constError.localizedDescription)
+                }
+            })
+        })
     }
 }
+
 

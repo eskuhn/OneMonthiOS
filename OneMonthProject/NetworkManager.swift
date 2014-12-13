@@ -183,4 +183,29 @@ public class NetworkManager
             }
         })
     }
+    
+    func postImage(image: UIImage, completionHandler: ErrorCompletionHandler?)
+    {
+        var imageData = UIImagePNGRepresentation(image) // returns NSData
+        var imageFile = PFFile(name: "image.png", data: imageData)
+        
+        var post = PFObject(className: "Post")
+        post["Image"] = imageFile
+        post["User"] = PFUser.currentUser()
+        
+        post.saveInBackgroundWithBlock {
+            (success, error) -> Void in
+            
+            if let constError = error
+            {
+                println("error uploading post object")
+            }
+            
+            if let constCompletionHandler = completionHandler
+            {
+                constCompletionHandler(error: error)
+            }
+        }
+    }
+    
 }
